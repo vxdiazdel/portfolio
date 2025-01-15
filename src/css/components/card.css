@@ -1,0 +1,122 @@
+.card {
+  height: auto;
+  width: 100%;
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  padding: 6rem 2rem;
+  display: grid;
+  grid-auto-rows: max-content;
+  gap: 2rem;
+  align-content: start;
+  position: relative;
+  animation: shadowIn 4s ease-out forwards;
+
+  @media screen and (min-width: 992px) {
+    align-content: center;
+    height: auto;
+    width: 55%;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem;
+  }
+
+  &:before {
+    --size: 150px;
+
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(var(--size) / 2 * -1);
+    right: 0;
+    height: var(--size);
+    width: var(--size);
+    background: var(--text-primary);
+    border-radius: 50%;
+    z-index: -1;
+    transform: translateX(50%) scale(0);
+    transform-origin: bottom left;
+    animation: scaleIn 2s .75s var(--easing) forwards;
+  }
+
+  .grid-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .grid-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateX(1%);
+    animation: fadeLeft 2s .75s ease-out forwards;
+  }
+
+  .bio {
+    font-size: 1.5rem;
+  }
+
+  .jobs {
+    font-size: 1rem;
+  }
+  
+  header {
+    width: fit-content;
+    
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 200;
+      line-height: 1;
+      position: relative;
+      text-transform: lowercase;
+      
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45px;
+        height: 10px;
+        background: var(--text-primary);
+        opacity: 0;
+        transform: translateY(-25px);
+        animation: fadeIn 1.75s 1s ease-in-out forwards;
+      }
+    }
+
+    div {
+      position: relative;
+      overflow: hidden;
+      color: transparent;
+      animation: showText .1s ease-in-out forwards;
+      
+      @for $i from 1 to 4 {
+        &:nth-child($i) {
+          animation-delay: calc($i * .2s);
+        }
+        &:nth-child($i):before {
+          animation-delay: calc($i * .175s);
+        }
+      }
+             
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--text-primary);
+        transform: translateX(-101%);
+        animation: swipeIn 1.75s var(--easing) forwards;
+      }
+    }
+
+    .emoji {
+      font-size: 2.5rem;
+    }
+  }
+}

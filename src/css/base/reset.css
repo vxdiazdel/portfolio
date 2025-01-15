@@ -1,0 +1,21 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, var(--bg-primary-dark) 15%, var(--bg-primary), var(--bg-primary-light));
+  position: relative;
+  color: white;
+  overflow: hidden;
+}

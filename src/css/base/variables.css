@@ -1,0 +1,16 @@
+:root {
+  --bg-primary: #FDD5D6;;
+  --bg-primary-dark:  #D8ABAD;
+  --bg-primary-light: #FFE9E9;
+  --text-primary: #1B3FFD;
+  
+  --border-radius: 8px;
+  --box-shadow: -20px 46px 64px -13px rgba(0,0,0,0.1), -20px 36px 70px -10px rgba(0,0,0,0.11), -20px 38px 50px -20px rgba(0,0,0,0.12);
+  --easing: cubic-bezier(.19,1,.22,1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #232526;
+  --bg-primary-dark: #1e1e1e;
+  --bg-primary-light: #414345;
+}

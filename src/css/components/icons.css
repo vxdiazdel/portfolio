@@ -1,0 +1,25 @@
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    &:after {
+      display: none;
+    }
+  }
+
+  svg {
+    --size: 1.25rem;
+
+    cursor: pointer;
+    height: var(--size);
+    width: var(--size);
+    fill: white;
+    transition: fill 0.25s ease-in-out;
+
+    &:hover {
+      fill: var(--text-primary);
+    }
+  }
+}
