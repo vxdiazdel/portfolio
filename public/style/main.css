@@ -21,7 +21,12 @@
 }
 
 html {
+  color-scheme: light dark;
   font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -267,10 +272,10 @@ a:after {
             flex-direction: column;
     gap: 1.5rem;
     opacity: 0;
-    -webkit-transform: translateX(1%);
-            transform: translateX(1%);
-    -webkit-animation: fadeLeft 2s .75s ease-out forwards;
-            animation: fadeLeft 2s .75s ease-out forwards;
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+    -webkit-animation: fadeLeft 2.5s 1s var(--easing) forwards;
+            animation: fadeLeft 2.5s 1s var(--easing) forwards;
   }
 
 .card .bio {

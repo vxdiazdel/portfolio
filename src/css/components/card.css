@@ -49,8 +49,8 @@
     flex-direction: column;
     gap: 1.5rem;
     opacity: 0;
-    transform: translateX(1%);
-    animation: fadeLeft 2s .75s ease-out forwards;
+    transform: translateX(2px);
+    animation: fadeLeft 2.5s 1s var(--easing) forwards;
   }
 
   .bio {
