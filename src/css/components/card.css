@@ -15,9 +15,10 @@
   @media screen and (min-width: 992px) {
     align-content: center;
     height: auto;
-    width: 55%;
+    width: 60%;
     grid-template-columns: repeat(2, 1fr);
     padding: 4rem;
+    max-width: 800px;
   }
 
   &:before {
